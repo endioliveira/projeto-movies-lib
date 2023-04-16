@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import { APIKey } from "./../../config/key";
 
 function Header() {
   const [search, setSearch] = useState("");
 
   const searchForAMovie = () => {
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&query=${search}`
+      `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${search}`
     )
       .then((response) => response.json())
       .then((data) => {

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { APIKey } from "./../../config/key";
 
 function Details() {
   const { id } = useParams();
@@ -9,7 +8,7 @@ function Details() {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=${APIKey}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&page=1`
     )
       .then((response) => response.json())
       .then((data) => {

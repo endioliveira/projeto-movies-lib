@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { APIKey } from "../../config/key";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 
 function DramaMovies() {
   const [dramaMovies, setDramaMovies] = useState([]);
@@ -11,7 +11,7 @@ function DramaMovies() {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&language=en-US&with_genres=18`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&with_genres=18`
     )
       .then((response) => response.json())
       .then((data) => setDramaMovies(data.results));
@@ -52,7 +52,7 @@ function DramaMovies() {
 
   return (
     <>
-      <div>
+      <div className="p-4">
         <h2 className="text-center my-16 mx-0 text-3xl">
           Lista de Filmes de Drama
         </h2>
