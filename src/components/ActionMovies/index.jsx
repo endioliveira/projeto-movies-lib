@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { APIKey } from "./../../config/key";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,7 +10,7 @@ function ActionMovies() {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&language=en-US&with_genres=28`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&with_genres=28`
     )
       .then((response) => response.json())
       .then((data) => setActionMovies(data.results));
@@ -52,7 +51,7 @@ function ActionMovies() {
 
   return (
     <>
-      <div>
+      <div className="p-4">
         <h2 className="text-center my-16 mx-0 text-3xl">
           Lista de Filmes de Ação
         </h2>
