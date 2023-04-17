@@ -19,7 +19,7 @@ Este projeto foi inspirado em videoaulas do canal Girl Coding no YouTube e utili
 ![image](https://user-images.githubusercontent.com/100172961/230538242-28da3c38-2a88-4e3a-9c6a-54eb2149bf43.png)
 
 ## Link do Deploy
-<i>Ainda não fiz o deploy, mas logo coloco aqui :) </i>
+https://projeto-movies-lib.vercel.app/
 
 ## Link da API que utilizei:
 https://developers.themoviedb.org/
