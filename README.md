@@ -5,7 +5,7 @@
 
 ## Introdução 
 
-Este projeto foi inspirado em videoaulas do canal Girl Coding no YouTube e utiliza a API de filmes "The Movie Database API", juntamente com a tecnologia ReactJS. Enquanto a instrutora usou Styled Components, decidi utilizar o Tailwind CSS. Até o momento, o usuário pode visualizar os filmes mais populares do ano e acessar os detalhes/resumo de cada filme ao clicar em sua foto. O projeto ainda está em andamento, e pretendo adicionar mais funcionalidades e recursos que sejam de meu interesse, para treinar e aprimorar minhas habilidades em desenvolvimento web. Fique à vontade enviar sugestões para melhorar este projeto!
+Este projeto foi inspirado em videoaulas do canal Girl Coding no YouTube que utiliza a API de filmes "The Movie Database API", juntamente com a tecnologia ReactJS. Enquanto a instrutora usou Styled Components, decidi utilizar o Tailwind CSS. Até o momento, o usuário pode visualizar os filmes mais populares do ano e acessar os detalhes/resumo de cada filme ao clicar em sua foto. O projeto ainda está em andamento, e pretendo adicionar mais funcionalidades e recursos que sejam de meu interesse, para treinar e aprimorar minhas habilidades em desenvolvimento web. Fique à vontade enviar sugestões para melhorar este projeto!
 
 ## O que utilizei no projeto?
 - ReactJS
