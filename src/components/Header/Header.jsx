@@ -6,7 +6,9 @@ function Header() {
 
   const searchForAMovie = () => {
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${search}`
+      `https://api.themoviedb.org/3/search/movie?api_key=${
+        import.meta.env.VITE_API_KEY
+      }&query=${search}`
     )
       .then((response) => response.json())
       .then((data) => {

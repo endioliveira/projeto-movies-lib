@@ -10,7 +10,9 @@ function ActionMovies() {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&with_genres=28`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${
+        import.meta.env.VITE_API_KEY
+      }&language=en-US&with_genres=28`
     )
       .then((response) => response.json())
       .then((data) => setActionMovies(data.results));
@@ -55,7 +57,12 @@ function ActionMovies() {
         <h2 className="text-center my-16 mx-0 text-3xl">
           Lista de Filmes de Ação
         </h2>
-        <Slider {...settings} centerMode={true} centerPadding="65px" slidesToShow={5.5}>
+        <Slider
+          {...settings}
+          centerMode={true}
+          centerPadding="15px"
+          slidesToShow={5.5}
+        >
           {actionMovies.map((actionMovie) => {
             return (
               <div className="flex flex-col items-center" key={actionMovie.id}>

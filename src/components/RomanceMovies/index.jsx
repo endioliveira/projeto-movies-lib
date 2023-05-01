@@ -10,7 +10,9 @@ function RomanceMovies() {
 
   useEffect(() => {
     fetch(
-        `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&with_genres=10749`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${
+        import.meta.env.VITE_API_KEY
+      }&language=en-US&with_genres=10749`
     )
       .then((response) => response.json())
       .then((data) => setRomanceMovies(data.results));
@@ -55,7 +57,12 @@ function RomanceMovies() {
         <h2 className="text-center my-16 mx-0 text-3xl">
           Lista de Filmes de Romance
         </h2>
-        <Slider {...settings} centerMode={true} centerPadding="60px" slidesToShow={5}>
+        <Slider
+          {...settings}
+          centerMode={true}
+          centerPadding="15px"
+          slidesToShow={5}
+        >
           {romanceMovies.map((romanceMovie) => {
             return (
               <div className="flex flex-col items-center" key={romanceMovie.id}>

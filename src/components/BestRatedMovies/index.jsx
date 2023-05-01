@@ -10,7 +10,9 @@ function BestRatedMovies() {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${
+        import.meta.env.VITE_API_KEY
+      }&language=en-US&page=1`
     )
       .then((response) => response.json())
       .then((data) => setBestRatedMovies(data.results));
@@ -58,7 +60,7 @@ function BestRatedMovies() {
         <Slider
           {...settings}
           centerMode={true}
-          centerPadding="65px"
+          centerPadding="15px"
           slidesToShow={5.5}
         >
           {bestRatedMovies.map((bestRatedMovie) => {

@@ -24,6 +24,7 @@ function Details() {
 
         setMovie(movie);
       });
+      
   }, []);
 
   return (
