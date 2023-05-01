@@ -10,7 +10,9 @@ function AnimationMovies() {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&with_genres=16`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${
+        import.meta.env.VITE_API_KEY
+      }&language=en-US&with_genres=16`
     )
       .then((response) => response.json())
       .then((data) => setAnimationMovies(data.results));
@@ -58,7 +60,7 @@ function AnimationMovies() {
         <Slider
           {...settings}
           centerMode={true}
-          centerPadding="65px"
+          centerPadding="15px"
           slidesToShow={5.5}
         >
           {animationMovies.map((animationMovie) => {

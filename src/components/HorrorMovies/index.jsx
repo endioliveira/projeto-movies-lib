@@ -58,7 +58,7 @@ function HorrorMovies() {
         <Slider
           {...settings}
           centerMode={true}
-          centerPadding="65px"
+          centerPadding="15px"
           slidesToShow={5.5}
         >
           {horrorMovies.map((horrorMovie) => {

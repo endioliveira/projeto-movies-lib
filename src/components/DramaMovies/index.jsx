@@ -4,14 +4,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 function DramaMovies() {
   const [dramaMovies, setDramaMovies] = useState([]);
   const image_path = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&with_genres=18`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${
+        import.meta.env.VITE_API_KEY
+      }&language=en-US&with_genres=18`
     )
       .then((response) => response.json())
       .then((data) => setDramaMovies(data.results));
@@ -59,7 +60,7 @@ function DramaMovies() {
         <Slider
           {...settings}
           centerMode={true}
-          centerPadding="65px"
+          centerPadding="15px"
           slidesToShow={5.5}
         >
           {dramaMovies.map((dramaMovie) => {

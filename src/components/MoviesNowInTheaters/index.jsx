@@ -10,7 +10,10 @@ function MoviesNowInTheThearters() {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&page=1`)
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=${
+        import.meta.env.VITE_API_KEY
+      }&language=en-US&page=1`
+    )
       .then((response) => response.json())
       .then((data) => setMoviesNowInTheThearters(data.results));
   }, []);
@@ -47,21 +50,25 @@ function MoviesNowInTheThearters() {
       },
     ],
   };
-  
 
   return (
     <>
       <div className="p-4">
-        <h2 className="text-center my-16 mx-0 text-3xl">Lista de Filmes que Estão Agora nos Cinemas</h2>
+        <h2 className="text-center my-16 mx-0 text-3xl">
+          Lista de Filmes que Estão Agora nos Cinemas
+        </h2>
         <Slider
           {...settings}
           centerMode={true}
-          centerPadding="65px"
+          centerPadding="15px"
           slidesToShow={5.5}
         >
           {moviesNowInTheThearters.map((moviesNowInTheThearter) => {
             return (
-              <div className="flex flex-col items-center" key={moviesNowInTheThearter.id}>
+              <div
+                className="flex flex-col items-center"
+                key={moviesNowInTheThearter.id}
+              >
                 <Link
                   to={`/details/${moviesNowInTheThearter.id}`}
                   className="hover:scale-110 transition-all"
